@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
@@ -23,30 +24,33 @@
     <main>
       <section class="sec" id="intro">
         <div>
-          <ul>
-            <li>A work in progress, just like me</li>
-          </ul>
+          <p class="tag">A work in progress, just like me</p>
 
-          <p>Hi, I'm Praise Kasim</p>
+          <p style="font-size: 20px;">Hi, I'm Kasim Praise</p>
 
-          <h1 class="one-h">Always developing.</h1>
+          <h1>Always developing. <span>Always learning</span></h1>
 
-          <h1 class="one-h">Always learning.</h1>
-
-          <p>
+          
+          <p class="para">
             Turning curiosity into code. I'm learning to build thoughtful,
             useful experiences for the web — one project at a time.
           </p>
+
+            <button class="contact-btn"><a href="#project">Explore my projects</a></button>
+
         </div>
 
-        <div>
-            <img src="images/START SMALL, KEEP BUILDING (1).png" alt="A coding image" />
+        <div class="image">
+          <img
+            src="images/START SMALL, KEEP BUILDING (1).png"
+            alt="A coding image"
+          />
         </div>
       </section>
 
       <hr />
 
-      <section class="sec" id="about">
+      <section class="sec" id="about" class="active">
         <div>
           <ul type="none">
             <li>A little about me</li>
@@ -66,7 +70,7 @@
         </div>
       </section>
 
-      <section class="sec" id="projects">
+      <section class="sec" id="projects" class="active">
         <p class="one-p">My work</p>
 
         <h1 class="two-h">Projects I've worked on</h1>
@@ -84,7 +88,7 @@
         </div>
       </section>
 
-      <section class="sec" id="skills">
+      <section class="sec" id="skills" class="active">
         <p class="one-p">My skills</p>
 
         <h1 class="two-h">Technologies I work with</h1>
@@ -98,7 +102,7 @@
         </ul>
       </section>
 
-      <section class="sec" id="contact">
+      <section class="sec" id="contact" class="active">
         <p class="one-p">Get in touch</p>
 
         <h1 class="two-h">Let's work together</h1>
