@@ -214,58 +214,68 @@ h2 {
 }
 
 /* Skills section */
-/* .skills-list {
+#skills {
+    margin-bottom: 50px;
+}
+
+#skills .tag {
+    letter-spacing: 2px;
+    margin: 50px 0 0 50px;
+}
+
+#skills h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0 0 50px 40px;
+}
+
+.skills-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    justify-items: center;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px 30px;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 50px;
 }
 
 .skills-list li {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 12px;
-    padding: 25px 15px;
-    background-color: #f2f2f2;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    font-size: 17px;
+    font-size: 14px;
     font-weight: 500;
-    transition: 0.3s ease;
 }
 
-.skills-list li img {
-    background-color: #f2f2f2;
-    border: 1px solid #e5e5e5;
-    border-radius: 8px;
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
+.skill-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #edf3ef;
+    border: 1px solid #d5e0d9;
+    border-radius: 6px;
+    color: #008f45;
+    font-size: 15px;
+    font-weight: 500;
 }
-
-.skills-list li:hover {
-    border-color: #008f45;
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-} */
 
 /* Contact section */
 #contact {
     margin-bottom: 30px;
 }
 
-.two-h {
+#contact p {
     font-size: 25px;
-    padding: 0 30px;
-    margin-top: 20px;
-    margin-bottom: 35px;
+    font-weight: bold;
+    margin: 30px 0 40px 50px;
 }
 
 .contact-form {
     padding: 0 30px;
+    margin-left: 50px;
     max-width: 650px;
     display: flex;
     flex-direction: column;
