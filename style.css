@@ -8,6 +8,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Header styling */
 header {
     background-color: white;
     border-bottom: 1px solid grey;
@@ -49,6 +50,7 @@ a {
     text-decoration: none;
 }
 
+/* Intro section */
 h1 {
     font-size: 40px;
     font-weight: bold;
@@ -121,10 +123,11 @@ span {
     height: auto;
 }
 
+
+/* About section */
 #about {
     display: flex;
     flex-direction: column;
-    gap: 0.5px;
 }
 
 .title {
@@ -143,6 +146,7 @@ span {
     min-height: 300px;
     padding: 10px 50px 30px;
     align-items: center;
+    margin-top: -15px;
 }
 
 h2 {
@@ -151,14 +155,75 @@ h2 {
     margin-top: 0;
 }
 
+/* Contact section */
+#contact {
+    margin-bottom: 30px;
+}
 
+.two-h {
+    font-size: 25px;
+    padding: 0 30px;
+    margin-top: 0;
+    margin-bottom: 35px;
+}
+
+.contact-form {
+    padding: 0 30px;
+    max-width: 650px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: -8px;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 16px;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+    border-color: #008f45;
+    box-shadow: 0 0 4px rgba(0, 143, 69, 0.2);
+}
+
+#contact textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contact button {
+    width: fit-content;
+    padding: 13px 28px;
+    background-color: #008f45;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#contact button:hover {
+    background-color: #006b34;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
 /* Tablet and mobile screens */
 @media screen and (max-width: 768px) {
-
-    /* body {
-        background-color: yellow;
-    } */
 
     /* Navigation */
     nav {
@@ -177,7 +242,7 @@ h2 {
         font-size: 16px;
         gap: 10px;
     }
-    /* Hero section */
+    /* Intro section */
     #intro {
         display: flex;
         flex-direction: column;
@@ -195,11 +260,12 @@ h2 {
         max-width: 500px;
     }
 
+    /* About section */
     #about {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        gap: 0.5px;
+        gap: 2px;
     }
 
     .title {
@@ -211,5 +277,18 @@ h2 {
         display: flex;
         flex-direction: column;
         padding: 10px 20px 30px;
+    }
+
+    /* Contact section */
+    .two-h {
+        margin: 0 0 20px 0;
+    }
+
+    #contact form {
+        width: 100%;
+    }
+
+    #contact button {
+        width: 100%;
     }
 }
