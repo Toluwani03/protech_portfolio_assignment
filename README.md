@@ -36,7 +36,7 @@ To view the project locally:
 2. Navigate to the project folder:
 
    ```bash
-   cd portflio_assignment
+   cd portfolio_assignment
    ```
 
 3. Open `index.html` in your browser.
