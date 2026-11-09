@@ -24,11 +24,11 @@
     <main>
       <section class="sec" id="intro">
         <div>
-          <p class="tag">A work in progress, just like me</p>
+            <p class="tech">A work in progress, just like me</p>
 
-          <p style="font-size: 20px">Hi, I'm Kasim Praise</p>
+          <p class="name">Hi, I'm <br /><span style="font-weight: 600;">Kasim Praise</span></p>
 
-          <h1>Always developing. <span>Always learning</span></h1>
+          <h1 style="margin-top: -15px;">Always developing. <span>Always learning</span></h1>
 
           <p class="para">
             Turning curiosity into code. I'm learning to build thoughtful,
@@ -36,13 +36,13 @@
           </p>
 
           <button class="contact-btn">
-            <a href="#project">Explore my projects</a>
+            <a href="#projects">Explore my projects</a>
           </button>
         </div>
 
         <div class="image">
           <img
-            src="images/START SMALL, KEEP BUILDING (1).png"
+            src="images/modern-developer-workspace-with-multiple-monitors_1127-72625.avif"
             alt="A coding image"
           />
         </div>
@@ -50,11 +50,13 @@
 
       <hr />
 
-      <section id="about" class="all-sec">
+
+      <!-- About section -->
+      <section id="about" class="sec">
         <h2 class="title">About Me</h2>
 
         <div id="m-about">
-          <div>
+          <div class="first-div">
             <p class="tag">A little about me</p>
 
             <h2>Curiosity is where it all begins.</h2>
@@ -81,43 +83,72 @@
 
       <hr />
 
-      <section id="projects" class="all-sec">
+
+      <!-- Projects section -->
+      <section id="projects" class="sec">
         <h2 class="title">My Projects</h2>
 
-        <p class="tag">My work</p>
+        <!-- <p class="tag">My work</p> -->
 
         <h1>Projects I've worked on</h1>
 
         <div class="project-container">
           <div class="project-card">
+            <img src="images/project.png" alt="portfolio-screenshot" class="project-image">
+
             <h2>Personal Portfolio</h2>
             <p>
               A clean, responsive space to share a learning journey, showcase
               projects, and connect with others.
             </p>
+
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Responsive design</span>
+            </div>
           </div>
 
           <div class="project-card">
+            <img src="images/to-do list.jpg" alt="portfolio-screenshot" class="project-image">
+
             <h2>Everyday tasks</h2>
             <p>
               A simple task manager to help organize the day, track progress,
               and keep the little things in order.
             </p>
+
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <!-- <span>JavaScript</span> -->
+            </div>
           </div>
 
           <div class="project-card">
+            <img src="images/OIP.webp" alt="portfolio-screenshot" class="project-image">
+
+            
             <h2>A little escape</h2>
             <p>
               A travel-inspired website exploring thoughtful layouts, beautiful
               imagery, and responsive design.
             </p>
+
+            <div class="tech-tags">
+              <span>HTML</span>
+              <span>CSS</span>
+              <!-- <span>JavaScript</span>
+              <span>React</span> -->
+            </div>
           </div>
-          <!-- Add more project cards as needed -->
         </div>
       </section>
 
       <hr />
 
+
+      <!-- Skills section -->
       <section class="sec" id="skills">
         <h2 class="title">My Skills</h2>
 
@@ -149,7 +180,9 @@
 
       <hr />
 
-      <section id="contact" class="all-sec">
+
+      <!-- Contact section -->
+      <section id="contact" class="sec">
         <h2 class="title">Contact Me</h2>
 
         <p>Get in touch. Let's work together</p>
@@ -193,11 +226,13 @@
 
     <hr />
 
+
+    <!-- Footer section -->
     <footer id="footer">
       <p class="pair">kasim praise.</p>
 
       <p style="color: rgb(0, 128, 68)">
-        copyright &copy; 2026 Praise Kasim. All rights reserved.
+        copyright &copy; 2026 Praise Kasim.
       </p>
     </footer>
   </body>
