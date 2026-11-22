@@ -54,6 +54,24 @@ a {
     text-decoration: none;
 }
 
+/* Theme toggle button */
+#theme-toggle {
+    padding: 8px 14px;
+    background-color: #edf3ef;
+    color: #008f45;
+    border: 1px solid #d5e0d9;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: #008f45;
+    color: white;
+}
+
 
 /* Intro section */
 h1 {
@@ -594,4 +612,11 @@ footer p {
         align-items: center;
         gap: 10px;
     }
+}
+
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f5f5f5;
 }

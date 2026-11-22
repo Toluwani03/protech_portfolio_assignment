@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script src="./script/script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
@@ -18,6 +19,8 @@
           <li><a href="#skills">Skills</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
+
+        <button id="theme-toggle" type="button">Dark Mode</button>
       </nav>
     </header>
 
@@ -92,8 +95,8 @@
 
         <h1>Projects I've worked on</h1>
 
-        <div class="project-container">
-          <article class="project-card">
+        <div class="project-container" id="project-container">
+          <!-- <article class="project-card">
             <img src="images/project.png" alt="screenshot of my portfolio" class="project-image">
 
             <h2>Personal Portfolio</h2>
@@ -120,9 +123,9 @@
 
             <div class="tech-tags">
               <span>HTML</span>
-              <span>CSS</span>
+              <span>CSS</span> -->
               <!-- <span>JavaScript</span> -->
-            </div>
+            <!-- </div>
           </article>
 
           <article class="project-card">
@@ -137,11 +140,11 @@
 
             <div class="tech-tags">
               <span>HTML</span>
-              <span>CSS</span>
+              <span>CSS</span> -->
               <!-- <span>JavaScript</span>
               <span>React</span> -->
-            </div>
-          </article>
+            <!-- </div>
+          </article> -->
         </div>
       </section>
 
@@ -189,9 +192,8 @@
 
         <form
           class="contact-form"
-          action="mailto:praisekasim03@gmail.com"
-          method="post"
-          enctype="text/plain"
+          id="contact-form"
+          novalidate
         >
           <label for="name">Name:</label>
           <input
@@ -199,8 +201,10 @@
             id="name"
             name="name"
             placeholder="Your name"
-            required
+            aria-describedby="name-error"
           />
+          <small id="name-error" class="error-message" aria-live="polite"></small>
+
 
           <label for="email">Email:</label>
           <input
@@ -208,18 +212,24 @@
             id="email"
             name="email"
             placeholder="Your email address"
-            required
+            aria-describedby="email-error"
           />
+          <small id="email-error" class="error-message" aria-live="polite"></small>
+
 
           <label for="message">Message:</label>
           <textarea
             id="message"
             name="message"
             placeholder="Your message"
-            required
+            aria-describedby="message-error"
           ></textarea>
+          <small id="message-error" class="error-message" aria-live="polite"></small>
+
 
           <button type="submit">Send</button>
+          <p id="form-status" aria-live="polite"></p>
+
         </form>
       </section>
     </main>

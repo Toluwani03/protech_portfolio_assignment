@@ -35,6 +35,96 @@ try {
 }
 
 
+// Creating a project array
+const projects = [
+    {
+        name: "Personal Portfolio",
+        description: "A clean, responsive space to share a learning journey, showcase projects, and connect with others.",
+        image: "images/project.png",
+        technologies: ["HTML", "CSS", "Responsive design"]
+    },
+    {
+        name: "Everyday tasks",
+        description: "A simple task manager to help organize the day, track progress, and keep the little things in order.",
+        image: "images/to-do list.jpg",
+        technologies: ["HTML", "CSS"]
+    },
+    {
+        name: "A little escape",
+        description: "A travel-inspired website exploring thoughtful layouts, beautiful imagery, and responsive design.",
+        image: "images/OIP.webp",
+        technologies: ["HTML", "CSS"]
+    }
+    // {
+    // name: "My Recipe Book",
+    // description: "A website for discovering and organizing favourite recipes.",
+    // image: "images/recipe-book.png",
+    // technologies: ["HTML", "CSS", "JavaScript"]
+    // }
+];
+
+// const projectNames = projects.map(function (project) {
+//     return project.name;
+// });
+
+// console.log(projectNames);
+
+function getProjectCount() {
+    return projects.length;
+}
+
+console.log(getProjectCount());
+
+function getProjectNames() {
+    return projects.map(function (project) {
+        return project.name;
+    });
+}
+
+console.log(getProjectNames());
+
+const projectContainer = document.getElementById("project-container");
+
+function displayProjects() {
+    projects.forEach(function (project) {
+        const projectCard = document.createElement("article");
+        projectCard.classList.add("project-card");
+        const projectImage = document.createElement("img");
+        projectImage.src = project.image;
+        projectImage.alt = `Screenshot of ${project.name}`;
+        projectImage.classList.add("project-image");
+
+        // Creating project title
+        const projectTitle = document.createElement("h2");
+        projectTitle.textContent = project.name;
+
+        // Creating project description
+        const projectDescription = document.createElement("p");
+        projectDescription.textContent = project.description;
+
+        // Creating tags container
+        const techTags = document.createElement("div");
+        techTags.classList.add("tech-tags");
+
+
+        project.technologies.forEach(function (technology) {
+        const techTag = document.createElement("span");
+        techTag.textContent = technology;
+        techTags.appendChild(techTag);
+        });
+
+
+        projectCard.appendChild(projectImage);
+        projectCard.appendChild(projectTitle);
+        projectCard.appendChild(projectDescription);
+        projectCard.appendChild(techTags);
+
+        projectContainer.appendChild(projectCard);
+    });
+}
+
+
+
 // Validations
 const contactForm = document.getElementById("contact-form");
 
@@ -88,3 +178,7 @@ contactForm.addEventListener("submit", function (event) {
     console.log(name, email, message);
 });
 
+
+
+// Display projects
+displayProjects();
