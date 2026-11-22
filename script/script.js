@@ -138,7 +138,7 @@ contactForm.addEventListener("submit", function (event) {
     // Name validation
     const nameError = document.getElementById("name-error");
 
-    console.log(name.length)
+    // console.log(name.length)
 
     if (name.length < 3) {
         nameError.textContent = "Name must be at least 3 characters long.";
@@ -184,6 +184,7 @@ contactForm.addEventListener("submit", function (event) {
 displayProjects();
 
 
+// Event listener and Event delegation
 projectContainer.addEventListener("click", function (event) {
     // console.log("A project was clicked!");
     const clickedCard = event.target.closest(".project-card");
