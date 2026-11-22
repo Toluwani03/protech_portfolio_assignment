@@ -1,5 +1,36 @@
-console.log ("It is working")
+// console.log ("It is working")
 
+// Theme-toggle
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+
+     if (document.body.classList.contains("dark-mode")) {
+        themeToggle.textContent = "Light Mode";
+    }
+    
+    else {
+        themeToggle.textContent = "Dark Mode";
+    }
+
+    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+});
+
+const savedTheme = localStorage.getItem("theme");
+
+if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    themeToggle.textContent = "Light Mode";
+}
+
+else {
+    document.body.classList.remove("dark-mode");
+    themeToggle.textContent = "Dark Mode";
+}
+
+
+// Validations
 const contactForm = document.getElementById("contact-form");
 
 contactForm.addEventListener("submit", function (event) {
