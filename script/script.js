@@ -14,19 +14,24 @@ themeToggle.addEventListener("click", function () {
         themeToggle.textContent = "Dark Mode";
     }
 
-    localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    // localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    localStorage.setItem("themePreference", JSON.stringify(document.body.classList.contains("dark-mode") ? "dark" : "light"));
+
 });
 
-const savedTheme = localStorage.getItem("theme");
+// const savedTheme = localStorage.getItem("theme");
+try {
+    const savedTheme = JSON.parse(localStorage.getItem("themePreference"));
 
-if (savedTheme === "dark") {
-    document.body.classList.add("dark-mode");
-    themeToggle.textContent = "Light Mode";
-}
-
-else {
-    document.body.classList.remove("dark-mode");
-    themeToggle.textContent = "Dark Mode";
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark-mode");
+        themeToggle.textContent = "Light Mode";
+    } else {
+        document.body.classList.remove("dark-mode");
+        themeToggle.textContent = "Dark Mode";
+    }
+} catch (error) {
+    console.error("Unable to load theme preference:", error);
 }
 
 
