@@ -182,3 +182,14 @@ contactForm.addEventListener("submit", function (event) {
 
 // Display projects
 displayProjects();
+
+
+projectContainer.addEventListener("click", function (event) {
+    // console.log("A project was clicked!");
+    const clickedCard = event.target.closest(".project-card");
+
+    if (clickedCard) {
+        const projectTitle = clickedCard.querySelector("h2").textContent;
+        console.log(projectTitle);    
+    }
+});
